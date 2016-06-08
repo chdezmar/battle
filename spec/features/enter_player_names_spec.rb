@@ -6,10 +6,7 @@ require_relative "../../app"
   #We want to Start a fight by entering our names and seeing them
   feature "players use a form to enter their names" do
     scenario "player names are displayed onscreen" do
-      visit("/")
-      fill_in('player1', with: 'Andrea')
-      fill_in('player2', with: 'Randy')
-      click_button('Submit')
+      enter_names_and_play
       expect(page).to have_content("Andrea -vs- Randy")
     end
   end
