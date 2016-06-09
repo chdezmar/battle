@@ -9,19 +9,11 @@ require_relative "../../app"
       enter_random_name_for_both_players_and_play
       click_button('Attack')
       expect(page).to have_content("#{@current_name} has attacked #{@current_name}!!")
-    end 
-  end  
+    end
+  end
 
-=begin
-  #setup
-  go to index
-  fill names + submit
+  # As Player 1,
+  # So I can start to win a game of Battle,
+  # I want my attack to reduce Player 2's HP
 
-  #exercise
-  click attack button
-
-  #verify
-  attack is confirmed with message 'Player 1 has attacked Player 2!!'
-
-  #teardown
-=end
+  
