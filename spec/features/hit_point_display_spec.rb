@@ -7,7 +7,7 @@ require_relative "../../app"
   feature "viewing hit points" do
     scenario "player 1 can see player 2's hit points" do
       enter_random_name_for_both_players_and_play
-      expect(page).to have_content("#{@current_name}'s HitPoints: 1")
+      expect(page).to have_content("#{@current_name}'s HitPoints: 60")
     end
   end
 
