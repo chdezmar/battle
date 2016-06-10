@@ -4,6 +4,8 @@
 <p>Player2: <%= @game.player2.name %></p>
 <p><%= @game.player2.name %>'s HitPoints: <%= @game.player2.hitpoints %></p>
 
+<p><%= @game.current_turn.name %>'s turn</p>
+
 <form action="/attack">
   <button type="submit" value="attack">Attack</button>
 </form>
