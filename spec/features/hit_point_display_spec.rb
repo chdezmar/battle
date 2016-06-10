@@ -9,6 +9,12 @@ require_relative "../../app"
       enter_random_name_for_both_players_and_play
       expect(page).to have_content("#{@current_name}'s HitPoints: 60")
     end
-  end
 
-  
+    scenario "player 2 can see player 1's hit points" do
+      enter_random_name_for_both_players_and_play
+      click_button('Attack')
+      click_button('Go Back')
+      expect(page).to have_content("#{@current_name}'s HitPoints: 60")
+    end
+
+  end

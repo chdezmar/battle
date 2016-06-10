@@ -22,6 +22,18 @@ require_relative "../../app"
       expect(page).not_to have_content("Dave's HitPoints: 60")
       expect(page).to have_content("Dave's HitPoints: 50")
     end
+
+
+
+    scenario "Player 2 attacks player 1 and attack is confirmed" do
+      enter_names_and_play
+      click_button('Attack')
+      click_button('Go Back')
+      click_button('Attack')
+      expect(page).to have_content("Dave has attacked Susanna!!")
+    end
+
+
   end
 
 
